@@ -52,6 +52,16 @@ li{
 /* for mainbar top half */
 .mainbar > .mainbar_top{
     background-color: lightblue;
+    display:grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+.searchbar{
+    background-color: lightpink;
+}
+
+.username{
+    background-color: lightsalmon;
 }
 
 /* for the mainbar bottom half */
@@ -72,12 +82,34 @@ li{
     gap: 20px;
 }
 
+/* this is for the your project section above the 1st item */
+.items > h1{
+    top: -40px;
+    font-size: 20px;
+    position: absolute;
+    background-color: red;
+}
+
+
 .items{
+    position: relative;
     width: 350px;
     height: 200px;
     background-color: rebeccapurple;
     outline: 3px dashed;
     border-radius: 10px;
+    & > div > h1{
+        font-size: 20px;
+    }
+
+    & > div > p{
+        font-size: 15px;
+    }
+
+    & > div > footer > img{
+        height: 30px;
+        width: 30px;
+    }
 }
 
 /* this is where all the announcement and trending card are present */
