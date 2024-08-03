@@ -11,3 +11,87 @@
     box-sizing: border-box;
 }
 
+body{
+    font-size: 16px;
+}
+
+li{
+    list-style: none;
+}
+
+/* this hold the entire admin webpage */
+.mainContainer{
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 2fr 8fr;
+}
+
+/* for the sidebar */
+.mainContainer > .sidebar{
+    background-color: darkcyan;
+    display: grid;
+    grid-template-rows: min-content min-content min-content;
+    padding: 20px;
+    gap: 50px;
+}
+
+.sidebar > div{
+    outline: 3px dashed;
+    background-color: palevioletred;
+}
+
+/* for the mainbar */
+.mainContainer > .mainbar{
+    display: grid;
+    background-color: darkblue;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(100px,150px) 7fr;
+}
+
+/* for mainbar top half */
+.mainbar > .mainbar_top{
+    background-color: lightblue;
+}
+
+/* for the mainbar bottom half */
+.mainbar > .mainbar_bottom{
+    background-color: lightgreen;
+    display: grid;
+    grid-template-columns:6fr 2fr;
+}
+
+/* this is where all the card are present */
+.mainbar_bottom > .leftBar{
+    background-color:darkred;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,400px);
+    justify-content: center;
+    padding: 40px;
+    padding-top: 80px;
+    gap: 20px;
+}
+
+.items{
+    width: 350px;
+    height: 200px;
+    background-color: rebeccapurple;
+    outline: 3px dashed;
+    border-radius: 10px;
+}
+
+/* this is where all the announcement and trending card are present */
+.mainbar_bottom > .rightBar{
+    background-color:darkorange;
+    display: grid;
+    grid-template: repeat(2,minmax(250px,350px)) / minmax(200px,250px);
+    padding: 30px;
+    padding-top: 80px;
+    gap: 100px;
+}
+
+.rightBar > div{
+    border-radius: 10px;
+    background-color: lightgoldenrodyellow;
+    outline: 3px dashed;
+}
