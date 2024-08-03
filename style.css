@@ -84,7 +84,7 @@ li{
 .mainbar_bottom > .rightBar{
     background-color:darkorange;
     display: grid;
-    grid-template: repeat(2,minmax(250px,350px)) / minmax(200px,250px);
+    grid-template: repeat(2,minmax(min-content,350px)) / minmax(min-content,250px);
     padding: 30px;
     padding-top: 80px;
     gap: 100px;
