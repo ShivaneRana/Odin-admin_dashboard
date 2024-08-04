@@ -77,17 +77,14 @@ li{
     display: grid;
     grid-template-columns: repeat(auto-fill,400px);
     justify-content: center;
-    padding: 40px;
     padding-top: 80px;
     gap: 20px;
 }
 
 /* this is for the your project section above the 1st item */
-.items > h1{
+.items > h3{
     top: -40px;
-    font-size: 20px;
     position: absolute;
-    background-color: red;
 }
 
 
@@ -98,17 +95,26 @@ li{
     background-color: rebeccapurple;
     outline: 3px dashed;
     border-radius: 10px;
+    padding: 20px;
+    display: grid;
     & > div > h1{
         font-size: 20px;
     }
 
     & > div > p{
         font-size: 15px;
+        line-height: 17px;
     }
 
-    & > div > footer > img{
-        height: 30px;
-        width: 30px;
+    & > div > footer{
+        display: flex;
+        justify-content: flex-end;
+        gap: 15px;
+        margin-top: 20px;
+        & > img{
+            height: 20px;
+            width: 21px;    
+        }
     }
 }
 
@@ -126,4 +132,66 @@ li{
     border-radius: 10px;
     background-color: lightgoldenrodyellow;
     outline: 3px dashed;
+    position: relative;
+    width: 250px;
+    & > h3{
+        position: absolute;
+        top: -40px;
+    }
 }
+
+
+/* this is for the announcement */
+.announcement{
+    line-height: 17px;
+    padding: 20px;
+    display: grid;
+    grid-template-rows: 33.3%;
+    & > div > h6{
+        font-size: clamp(12px,calc(1rem - 1vh),1rem);
+    }
+    & > div > p{
+        font-size: clamp(12px,calc(1rem - 1vh),1rem);
+    }
+}
+
+/* this is for the trending page */
+.trending{
+    padding: 20px;
+    & > div {
+        display: flex;
+        position: relative;
+
+        & > a{
+        text-decoration: none;
+        &:visited{
+            color: black;
+        }
+        & > img{
+            width: 40px;
+            height: 40px;
+            }
+        & > h6{
+            position: absolute;
+            top: 5px;
+            left: 50px;
+            font-size: clamp(12px,calc(1.3rem - 1vh),1px);
+            }
+        & > p{
+            color: gray;
+            font-weight: bold;
+            position: absolute;
+            top: 22px;
+            left: 52px;
+            display: inline-block;
+            font-size: clamp(12px,calc(1.2rem - 1vh),1px);
+            }
+        }
+    }
+}
+
+hr{
+    height: 1px;
+    color: gray;
+}
+
