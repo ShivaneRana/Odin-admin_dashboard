@@ -44,7 +44,6 @@ li{
 /* for the mainbar */
 .mainContainer > .mainbar{
     display: grid;
-    background-color: darkblue;
     grid-template-columns: 1fr;
     grid-template-rows: minmax(100px,150px) 7fr;
 }
@@ -66,14 +65,12 @@ li{
 
 /* for the mainbar bottom half */
 .mainbar > .mainbar_bottom{
-    background-color: lightgreen;
     display: grid;
     grid-template-columns:6fr 2fr;
 }
 
 /* this is where all the card are present */
 .mainbar_bottom > .leftBar{
-    background-color:darkred;
     display: grid;
     grid-template-columns: repeat(auto-fill,400px);
     justify-content: center;
@@ -92,13 +89,13 @@ li{
     position: relative;
     width: 350px;
     height: 200px;
-    background-color: rebeccapurple;
     outline: 3px dashed;
     border-radius: 10px;
     padding: 20px;
     display: grid;
     & > div > h1{
         font-size: 20px;
+        margin-bottom: 5px;
     }
 
     & > div > p{
@@ -112,15 +109,15 @@ li{
         gap: 15px;
         margin-top: 20px;
         & > img{
-            height: 20px;
-            width: 21px;    
+            height: 26px;
+            width: 27px;    
         }
     }
 }
 
 /* this is where all the announcement and trending card are present */
 .mainbar_bottom > .rightBar{
-    background-color:darkorange;
+    border-left: 3px dashed;
     display: grid;
     grid-template: repeat(2,minmax(min-content,350px)) / minmax(min-content,250px);
     padding: 30px;
@@ -130,7 +127,6 @@ li{
 
 .rightBar > div{
     border-radius: 10px;
-    background-color: lightgoldenrodyellow;
     outline: 3px dashed;
     position: relative;
     width: 250px;
@@ -158,6 +154,9 @@ li{
 /* this is for the trending page */
 .trending{
     padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6,1fr);
     & > div {
         display: flex;
         position: relative;
