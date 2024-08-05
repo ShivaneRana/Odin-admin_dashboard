@@ -9,6 +9,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    &::selection{
+        background-color: #333333;
+        color: whitesmoke;
+    }
 }
 
 body{
@@ -65,6 +69,7 @@ li{
             & > img{
                 height: 25px;
                 width: 25px;
+                user-select: none;
             }
         }
     }
@@ -87,6 +92,7 @@ li{
             & > img{
                 height: 25px;
                 width: 25px;
+                user-select: none;
             }
         }
     }
@@ -131,6 +137,7 @@ li{
     & > div > img{
         height: 25px;
         width: 25px;
+        user-select: none;
     }
 
     & > div > img:nth-child(2){
@@ -138,6 +145,7 @@ li{
         outline: 1px solid;
         width: 35px;
         border-radius: 50px;
+        user-select: none;
 
     }
     & > div > input{
@@ -149,9 +157,11 @@ li{
         outline: 1px solid;
         border-radius:20px ;
         padding-left: 10px;
+        transition: width 0.75s;
         &:focus{
             border: none;
             outline: 1px solid;
+            width: 900px;
         }
     }
     & > div > p{
@@ -189,11 +199,11 @@ li{
 
     & > div:last-child{
         display: flex;
-        width: 280px;
+        width: 300px;
         margin-right: 50px;
         justify-content: space-between;
+        gap: 10px;
         & > button{
-            background-color: red;
             width: 80px;
             height: 50px;
             border-radius: 50px;
@@ -201,9 +211,10 @@ li{
             color: whitesmoke;
             background-color: black;
             border:none;
-
+            transition: background-color 0.30s, width 0.50s; 
             &:hover{
                 background-color: #333333;
+                width: 120px;
             }
 
             &:active{
@@ -319,6 +330,7 @@ li{
         & > img{
             width: 40px;
             height: 40px;
+            user-select: none;
             }
         & > h6{
             position: absolute;
@@ -344,3 +356,17 @@ hr{
     color: gray;
 }
 
+.rotate {
+    &:hover{
+animation: rotate 2s;
+    }
+}
+
+@keyframes rotate {
+from {
+    transform: rotate(0deg);
+}
+to {
+    transform: rotate(360deg);
+}
+}
