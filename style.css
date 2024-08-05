@@ -24,21 +24,66 @@ li{
     display: grid;
     height: 100vh;
     width: 100vw;
-    grid-template-columns: 2fr 8fr;
+    grid-template-columns: 1fr 8fr;
 }
 
 /* for the sidebar */
 .mainContainer > .sidebar{
-    background-color: darkcyan;
+    border-right: 3px dashed black;
     display: grid;
     grid-template-rows: min-content min-content min-content;
     padding: 20px;
     gap: 50px;
 }
 
-.sidebar > div{
-    outline: 3px dashed;
-    background-color: palevioletred;
+.sideTop{
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    & > img{
+        border-radius: 50px;
+        height: 50px;
+        width: 50px;
+    }
+}
+
+.sideMiddle{
+    & > ul{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        & > li{
+            padding-left: 10px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            & > img{
+                height: 25px;
+                width: 25px;
+            }
+        }
+    }
+}
+
+.sideBottom{
+    & > ul{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        & > li{
+            padding-left: 10px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            & > img{
+                height: 25px;
+                width: 25px;
+            }
+        }
+    }
 }
 
 /* for the mainbar */
@@ -50,13 +95,61 @@ li{
 
 /* for mainbar top half */
 .mainbar > .mainbar_top{
-    background-color: lightblue;
     display:grid;
     grid-template-rows: 1fr 2fr;
 }
 
 .searchbar{
-    background-color: lightpink;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* this is first div */
+    & > div:first-child{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-left: 50px;
+    }
+
+    /* this is second div */
+    & > div:last-child{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width:200px;
+        margin-right: 50px;
+    }
+
+    & > div > img{
+        height: 25px;
+        width: 25px;
+    }
+
+    & > div > img:nth-child(2){
+        height: 35px;
+        outline: 1px solid;
+        width: 35px;
+        border-radius: 50px;
+
+    }
+    & > div > input{
+        font-size: 16px;
+        width: 600px;
+        height: 30px;
+        border: none;
+        outline: 1px solid;
+        border-radius:20px ;
+        padding-left: 10px;
+        &:focus{
+            border: none;
+            outline: 1px solid;
+        }
+    }
+    & > div > p{
+
+    }
 }
 
 .username{
@@ -89,7 +182,7 @@ li{
     position: relative;
     width: 350px;
     height: 200px;
-    outline: 3px dashed;
+    outline: 2px dashed;
     border-radius: 10px;
     padding: 20px;
     display: grid;
@@ -127,7 +220,7 @@ li{
 
 .rightBar > div{
     border-radius: 10px;
-    outline: 3px dashed;
+    outline: 2px dashed;
     position: relative;
     width: 250px;
     & > h3{
