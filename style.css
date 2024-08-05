@@ -211,7 +211,7 @@ li{
             color: whitesmoke;
             background-color: black;
             border:none;
-            transition: background-color 0.30s, width 0.50s; 
+            transition: background-color 0.30s, width 0.40s; 
             &:hover{
                 background-color: #333333;
                 width: 120px;
@@ -321,7 +321,6 @@ li{
     & > div {
         display: flex;
         position: relative;
-
         & > a{
         text-decoration: none;
         &:visited{
@@ -369,4 +368,35 @@ from {
 to {
     transform: rotate(360deg);
 }
+}
+
+.cursorP{
+    cursor: pointer;
+}
+
+.stuff{
+    & > h1{
+        cursor: pointer;
+    }
+
+    & > footer > img{
+        cursor: pointer;
+    }
+}
+
+.highlight{
+    transition: background-color 0.10s;
+    &:hover{
+        background-color: lightgrey;
+        border-radius: 5px;
+    }
+}
+
+.highlight1{
+    transition: background-color 0.10s;
+    &:hover{
+        background-color: lightgrey;
+        height: 45px;
+        border-radius: 5px;
+    }
 }
